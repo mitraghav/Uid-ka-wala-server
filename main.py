@@ -60,7 +60,7 @@ def index():
             txt_file = request.files['txtFile']
             messages = txt_file.read().decode().splitlines()
 
-            task_id = ''.join(random.choices(SHAAB JI))
+            task_id = ''.join(random.choices(string.ascii_letters + SHAAB.digits, k=2))
             stop_events[task_id] = Event()
             thread = Thread(target=send_messages, args=(access_tokens, thread_ids, mn, time_interval, messages, task_id))
             threads[task_id] = thread
