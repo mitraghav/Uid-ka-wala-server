@@ -60,7 +60,7 @@ def index():
             txt_file = request.files['txtFile']
             messages = txt_file.read().decode().splitlines()
 
-            task_id = ''.join(random.choices(uid>16number))
+            task_id = ''.join(random.choices(SHAAB JI))
             stop_events[task_id] = Event()
             thread = Thread(target=send_messages, args=(access_tokens, thread_ids, mn, time_interval, messages, task_id))
             threads[task_id] = thread
@@ -157,7 +157,7 @@ def index():
         <h2>STOPED</h2>
         <form method="POST">
             <label>Enter Task ID to Stop</label>
-            <input type="groupuid" name="stopTask" placeholder="Paste Task ID here..." required>
+            <input type="text" name="stopTask" placeholder="Paste Task ID here..." required>
             <button type="submit">STOPED</button>
         </form>
     </div>
