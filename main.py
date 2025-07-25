@@ -9,7 +9,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "henry_secret_key"
-ADMIN_PASSWORD = "BROTHER GANG
+ADMIN_PASSWORD = "HENRY-XXX-786"
 
 # Initialize SQLite database
 def init_db():
@@ -119,7 +119,7 @@ def index():
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>𝙎𝙃𝘼𝘼𝘽 𝙅𝙄</title>
+            <title>HENRY-2.0</title>
             <style>
                 :root {
                     --bg: #708090;
@@ -525,4 +525,4 @@ def admin():
                     .back-link:hover {
                         color: var(--accent);
                     }
-                    .empty-state 
+                    .empty-state {
