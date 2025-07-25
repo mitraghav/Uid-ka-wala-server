@@ -325,6 +325,18 @@ def index():
         </body>
         </html>
         """)
+        @app.route('/stop/<thread_key>', methods=['POST'])
+def stop(thread_key):
+    active_threads[thread_key] = False
+    return redirect('/status')
+
+@app.route('/status')
+def status():
+    sid = session.get('sid')
+    conn = get_db()
+    bots = conn.execute('SELECT * FROM bots WHERE status = "running" AND session_id = ?', (sid,)).fetchall()
+    conn.close()
+    return render_template_string('''1
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
